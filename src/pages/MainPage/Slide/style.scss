@@ -1,0 +1,21 @@
+@import '../../../components/App/сolors';
+
+.slide {
+  &__title {
+    margin: 0;
+    margin-bottom: 8px;
+    margin-top: 30vh;
+    font-size: 40px;
+    font-weight: 500;
+    color: white;
+  }
+  &__desc {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 24px;
+    color: $gray-light;
+    margin: 0;
+  }
+}
+
+@import './medias';

@@ -1,0 +1,27 @@
+@import '../App/сolors';
+@import '../App/mixins';
+
+.confirm-button {
+  width: 176px;
+
+  &_confirm {
+    @include button(
+      $gray-light,
+      8px,
+      $button-color-from,
+      $button-color-to,
+      10%,
+      20%
+    );
+  }
+  &_deny {
+    @include button(
+      $gray-light,
+      8px,
+      $button-deny-left,
+      $button-deny-right,
+      10%,
+      20%
+    );
+  }
+}

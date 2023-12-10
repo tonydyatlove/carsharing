@@ -1,0 +1,82 @@
+@import '../../../components/App/сolors';
+
+.location-step {
+  &__form-container {
+    width: 325px;
+    text-align: right;
+  }
+  &__label {
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  &__form {
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  /* 
+		Styles for custom autocomplete field. Could not relocate
+	*/
+
+  .location-step__form {
+    .MuiAutocomplete-root {
+      display: inline-block;
+      position: relative;
+      width: 225px;
+
+      .MuiAutocomplete-inputRoot {
+        font-size: 14px;
+        font-weight: 300;
+
+        &::before {
+          border-bottom: 1px solid $gray;
+        }
+        &::after {
+          border-bottom: 1px solid $black;
+        }
+
+        .MuiAutocomplete-input {
+          padding: 2px 0;
+          padding-left: 4px;
+
+          &::placeholder {
+            color: $gray;
+            opacity: 1;
+          }
+        }
+        .MuiSvgIcon-fontSizeSmall {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  &__map-container {
+    margin-top: 44px;
+  }
+  &__map-text {
+    margin-bottom: 16px;
+  }
+  &__map {
+    position: relative;
+    height: 352px;
+    width: 736px;
+  }
+}
+
+/* 
+	Styles for custom dropdown options
+*/
+
+.MuiAutocomplete-option {
+  background-color: transparent;
+  color: $gray;
+  font-weight: 300;
+
+  &:hover {
+    background-color: transparent;
+    color: $accent;
+  }
+}
+
+@import './medias';

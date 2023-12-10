@@ -1,0 +1,53 @@
+@import '../../../components/App/сolors';
+@import '../../../components/App/mixins';
+
+
+@mixin button-hover($left, $right) {
+    background: linear-gradient(to right, darken($left, 5%), darken($right, 5%));
+}
+@mixin button-active($left, $right) {
+    background: linear-gradient(to right, darken($left, 10%), darken($right, 10%));
+}
+
+.slider__button {
+    @include button($gray-light, 4px, $button-color-from, $button-color-to, 5%, 10%);
+    padding: 0 36px;
+    margin-top: 32px;
+
+    &_1 {
+        background: linear-gradient(to right, $slider-1-left, $slider-1-right);
+        &:hover {
+            @include button-hover($slider-1-left, $slider-1-right);
+        }
+        &:active {
+            @include button-active($slider-1-left, $slider-1-right);
+        }
+    }
+    &_2 {
+        background: linear-gradient(to right, $slider-2-left, $slider-2-right);
+        &:hover {
+            @include button-hover($slider-2-left, $slider-2-right);
+        }
+        &:active {
+            @include button-active($slider-2-left, $slider-2-right);
+        }
+    }
+    &_3 {
+        background: linear-gradient(to right, $slider-3-left, $slider-3-right);
+        &:hover {
+            @include button-hover($slider-3-left, $slider-3-right);
+        }
+        &:active {
+            @include button-active($slider-3-left, $slider-3-right);
+        }
+    }
+    &_4 {
+        background: linear-gradient(to right, $slider-4-left, $slider-4-right);
+        &:hover {
+            @include button-hover($slider-4-left, $slider-4-right);
+        }
+        &:active {
+            @include button-active($slider-4-left, $slider-4-right);
+        }
+    }
+}

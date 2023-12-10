@@ -1,0 +1,22 @@
+@media screen and (max-device-width: 1439px), screen and (max-width: 1439px) {
+  .location-step {
+    &__map {
+      width: min(736px, 100%);
+    }
+  }
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .location-step {
+    &__form-container {
+      text-align: left;
+    }
+    &__label {
+      display: block;
+      margin-bottom: 8px;
+    }
+    &_input {
+      margin: 0;
+    }
+  }
+}

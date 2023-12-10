@@ -1,0 +1,11 @@
+@import '../App/сolors';
+@import '../App/mixins';
+
+.link-button {
+  @include button(white, 8px, $button-color-from, $button-color-to, 10%, 20%);
+  display: inline-block;
+  text-align: center;
+  line-height: 48px;
+  text-decoration: none;
+  padding: 0 56px;
+}

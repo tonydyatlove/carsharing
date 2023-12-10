@@ -1,0 +1,36 @@
+@import '../../../components/App/сolors';
+
+.total-step {
+  &__car-section {
+    display: flex;
+    justify-content: space-between;
+    max-width: 736px;
+  }
+
+  &__text-item {
+    margin-bottom: 8px;
+  }
+
+  &__model {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  &__number {
+    display: inline-block;
+    font-weight: 400;
+    border: 1px solid $gray;
+    border-radius: 4px;
+    padding: 4px 8px;
+  }
+  &__field {
+    font-weight: 700;
+  }
+
+  &__car-image {
+    img {
+      height: 116px;
+    }
+  }
+}
+
+@import './medias';

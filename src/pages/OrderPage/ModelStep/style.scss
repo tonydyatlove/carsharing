@@ -1,0 +1,105 @@
+@import '../../../components/App/сolors';
+
+.model-step {
+  display: flex;
+  flex-direction: column;
+
+  &__category-list {
+    margin-bottom: 48px;
+  }
+  &__category-item {
+    display: inline;
+    margin-right: 16px;
+  }
+
+  &__select.MuiInputBase-root {
+    display: none;
+  }
+
+  &__label {
+    display: inline-flex;
+    cursor: pointer;
+    align-items: center;
+    color: $gray;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      margin-right: 8px;
+      width: 12px;
+      height: 12px;
+      box-shadow: inset 0px 0px 0 1px $gray;
+      border-radius: 50%;
+    }
+  }
+
+  &__car-list-container {
+    position: relative;
+    flex-grow: 1;
+    min-height: 400px;
+  }
+  &__car-list {
+    display: grid;
+    grid-template-columns: 368px 368px;
+    grid-auto-rows: 224px;
+
+    position: absolute;
+    overflow-y: auto;
+    // height: calc(100vh - 260px);
+    height: 100%;
+    width: 756px;
+    padding-right: 16px;
+
+    /* Firefox styles for cars scrollbar */
+    scrollbar-color: $accent $gray-light;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      background-color: $gray-light;
+      width: 5px;
+      border-radius: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: $accent;
+      border-radius: 5px;
+    }
+  }
+  &__car-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    cursor: pointer;
+    border: 1px solid $gray-light;
+    margin: 0 -1px -1px 0;
+    padding: 16px;
+
+    &_active {
+      z-index: 2;
+      border: 1px solid $accent;
+    }
+    &:not(&_active) {
+      &:hover {
+        z-index: 1;
+        border: 1px solid $gray;
+      }
+    }
+  }
+  &__car-name {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  &__car-price {
+    color: $gray;
+    line-height: 17px;
+  }
+  &__car-image {
+    height: 116px;
+    align-self: flex-end;
+    text-align: right;
+  }
+}
+
+@import './medias';

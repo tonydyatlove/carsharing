@@ -1,0 +1,74 @@
+@import '../../../components/App/сolors';
+
+
+%arrow-props {
+    content: "";
+    display: block;
+    width: 12px;
+    border: 1px solid $gray-light;
+    border-radius: 1px;
+    background-color: $gray-light;
+    position: absolute;
+    top: calc(50% - 9px);
+}
+%arrow-left {
+    left: calc(50% - 4px);
+    transform-origin: left;
+}
+%arrow-right {
+    right: calc(50% - 4px);
+    transform-origin: right;
+}
+
+.slider__arrow {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 64px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(14, 194, 97, 0.2);
+    }
+
+    &_left {
+        left: 0;
+    
+        &:before {
+            @extend %arrow-props;
+            @extend %arrow-left;
+            transform: rotate(-45deg);
+        }
+        &:after {
+            @extend %arrow-props;
+            @extend %arrow-left;
+            transform: translateY(-1px) rotate(45deg);
+        }
+    }
+    &_right {
+        right: 0;
+    
+        &:before {            
+            @extend %arrow-props; 
+            @extend %arrow-right;
+            transform: rotate(45deg);
+        }
+        &:after {
+            @extend %arrow-props; 
+            @extend %arrow-right;
+            transform: translateY(-1px) rotate(-45deg);
+        }
+    }
+    &_disabled {
+        cursor: auto;
+        
+        &:hover {
+            background-color: transparent;
+        }
+    }
+}
+
+@import './medias';
+
+

@@ -1,0 +1,92 @@
+@import '../App/сolors';
+@import '../App/mixins';
+
+%no-list-style {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+%flex-props {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.dropdown {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(21, 27, 31, 0.8);
+  font-size: 32px;
+  font-weight: 500;
+
+  transform: translateX(-100%);
+  transition: all 0.3s ease-out;
+
+  &__sidebar {
+    min-width: 64px;
+    background-color: #111518;
+  }
+
+  &__lang-button {
+    display: none;
+  }
+
+  &__opaque {
+    @extend %flex-props;
+    min-width: 550px;
+    background-color: #111518;
+  }
+
+  &__content {
+    padding-left: 64px;
+  }
+
+  &__links {
+    @extend %no-list-style;
+    margin-top: calc(50vh - 100px);
+
+    li {
+      margin-bottom: 15px;
+    }
+  }
+  &__link {
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &_white {
+      @include link(white, $accent, $accent);
+    }
+  }
+
+  &__social {
+    @extend %no-list-style;
+    margin-top: 38px;
+    display: flex;
+
+    li {
+      margin-right: 24px;
+
+      svg {
+        display: block;
+        &:hover {
+          path {
+            fill: $accent;
+          }
+        }
+      }
+    }
+  }
+
+  &__transparent {
+    @extend %flex-props;
+  }
+
+  &_active {
+    transform: translateX(0);
+  }
+}
+
+@import './medias';

@@ -1,0 +1,21 @@
+@import '../App/сolors';
+
+.lang-button {
+  color: $accent;
+  font-size: 13px;
+  font-weight: 700;
+  background-color: transparent;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    color: $gray-light;
+    border: 1px solid $gray-light;
+    border-radius: 50%;
+  }
+  &:active {
+    color: $accent;
+  }
+}

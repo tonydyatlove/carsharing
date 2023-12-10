@@ -1,0 +1,57 @@
+@import '../../../components/App/сolors';
+@import '../../../components/App/mixins';
+
+.info {
+  box-sizing: border-box;
+  min-width: 550px;
+  margin-left: 64px;
+
+  &__title {
+    display: block;
+    margin: 0;
+    font-size: 70px;
+    font-weight: 700;
+
+    &_black {
+      color: $black;
+    }
+    &_accent {
+      color: $accent;
+    }
+  }
+  &__text {
+    margin: 0;
+    margin-top: 16px;
+    font-size: 26px;
+    font-weight: 300;
+    color: $gray;
+  }
+  &__link-button {
+    margin-top: 60px;
+  }
+
+  &__footer {
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 13px;
+  }
+
+  &__copyright {
+    color: $gray;
+  }
+  &__phone {
+    float: right;
+    @include link($black, $accent, $accent);
+  }
+
+  .wrapper {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 32px 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+@import './medias';

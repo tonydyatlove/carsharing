@@ -1,0 +1,16 @@
+@media screen and (max-device-width: 1023px), screen and (max-width: 1023px) {
+  .order-process-content {
+    flex-direction: column-reverse;
+
+    &__step {
+      padding-right: 0;
+    }
+
+    &__overall {
+      border-left: none;
+      border-bottom: 1px solid $gray-light;
+      padding: 16px 32px 16px 32px;
+      margin: 0 -32px;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@import '../../components/App/сolors';
+@import '../../components/App/mixins';
+
+%flex-props {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.main-page {
+  display: flex;
+  align-items: stretch;
+  height: 100vh;
+  min-height: 500px;
+
+  &__link {
+    text-decoration: none;
+
+    &_gray-light {
+      @include link($gray-light, $accent, $accent);
+    }
+    &_black {
+      @include link($black, $accent, $accent);
+    }
+    &_accent {
+      @include link($accent, $gray-light, white);
+    }
+  }
+
+  .info {
+    display: flex;
+    @extend %flex-props;
+  }
+  .slider {
+    @extend %flex-props;
+  }
+}
+
+@import './medias';

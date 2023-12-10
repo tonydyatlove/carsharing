@@ -1,0 +1,50 @@
+@mixin link($color, $hover-color, $active-color) {
+  color: $color;
+  &:hover {
+    color: $hover-color;
+  }
+  &:active {
+    color: $active-color;
+  }
+  &:disabled {
+    color: $gray;
+  }
+}
+
+@mixin button(
+  $color,
+  $border-radius,
+  $color-from,
+  $color-to,
+  $percent-hover,
+  $percent-active
+) {
+  font-size: 18px;
+  font-weight: 500;
+  height: 48px;
+  color: $color;
+  border: transparent;
+  border-radius: $border-radius;
+  cursor: pointer;
+  background: linear-gradient(to right, $color-from, $color-to);
+
+  &:hover {
+    background: linear-gradient(
+      to right,
+      darken($color-from, $percent-hover),
+      darken($color-to, $percent-hover)
+    );
+  }
+  &:active {
+    background: linear-gradient(
+      to right,
+      darken($color-from, $percent-active),
+      darken($color-to, $percent-active)
+    );
+  }
+
+  @media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+    width: 100%;
+    border-radius: 0;
+  }
+}

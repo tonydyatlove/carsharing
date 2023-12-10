@@ -1,0 +1,12 @@
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .header {
+    display: block;
+    text-align: right;
+    padding: 16px;
+
+    &__title {
+      display: block;
+      margin-bottom: 8px;
+    }
+  }
+}

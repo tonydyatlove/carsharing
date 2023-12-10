@@ -1,0 +1,23 @@
+@media screen and (max-device-width: 1439px), screen and (max-width: 1439px) {
+  .content {
+    &__header-wrapper {
+      padding: 32px 32px;
+    }
+  }
+}
+
+@media screen and (max-device-width: 1023px), screen and (max-width: 1023px) {
+  .content {
+    margin-left: 86px;
+  }
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .content {
+    margin-left: 0;
+
+    &__header-wrapper {
+      padding: 0;
+    }
+  }
+}

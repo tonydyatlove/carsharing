@@ -1,0 +1,35 @@
+@import '../App/сolors';
+@import '../App/mixins';
+
+%no-list-style {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+%flex-props {
+	flex-basis: 0;
+	flex-grow: 1;
+}
+
+.sidebar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+
+	position: fixed;
+	z-index: 10;
+
+	box-sizing: border-box;
+	padding: 32px 0;
+	min-width: 64px;
+	width: 64px;
+	height: 100vh;
+	background-color: #151b1f;
+
+	.sidebar__lang-button {
+		margin-bottom: -16px;
+	}
+}
+
+@import './medias';

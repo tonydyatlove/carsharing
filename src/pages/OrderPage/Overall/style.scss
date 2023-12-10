@@ -1,0 +1,62 @@
+@import '../../../components/App/сolors';
+
+.overall {
+  width: 288px;
+
+  &__title {
+    margin-bottom: 26px;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: right;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    display: flex;
+    margin-bottom: 16px;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px dotted $gray;
+    position: relative;
+
+    span {
+      position: relative;
+      background-color: white;
+      margin: 0;
+      bottom: -5px;
+
+      &:first-of-type {
+        padding-right: 4px;
+      }
+      &:last-of-type {
+        padding-left: 4px;
+      }
+    }
+  }
+
+  &__right {
+    color: $gray;
+    text-align: right;
+  }
+
+  &__price {
+    margin-top: 32px;
+    font-size: 16px;
+    font-weight: normal;
+  }
+  &__price-title {
+    font-weight: 500;
+  }
+
+  &__button {
+    margin-top: 32px;
+  }
+}
+
+@import './medias';

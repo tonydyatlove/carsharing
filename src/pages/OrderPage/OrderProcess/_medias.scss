@@ -1,0 +1,18 @@
+@media screen and (max-device-width: 1439px), screen and (max-width: 1439px) {
+  .order-process {
+    &__navigation {
+      padding-left: 32px;
+    }
+    &__content {
+      padding: 0 32px;
+    }
+  }
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .order-process {
+    &__navigation {
+      padding-left: 0;
+    }
+  }
+}

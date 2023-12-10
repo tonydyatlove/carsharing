@@ -1,0 +1,38 @@
+@media screen and (max-device-width: 1023px), screen and (max-width: 1023px) {
+    %line {
+        width: 32px;
+        transition: all ease-out 0.3s;
+    }
+    .sidebar__burger {
+        &_active {
+            &::before {
+                width: 24px;
+            }
+            span {
+                width: 0;
+            }
+            &::after {
+                width: 24px;
+            }
+        }
+    }    
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+    %line{
+        width: 20px;
+        background-color: $black;
+    }
+    .sidebar__burger {
+        &_active {
+            &::before {
+                background-color: white;
+                width: 24px;
+            }
+            &::after {
+                background-color: white;
+                width: 24px;
+            }
+        }        
+    }
+}

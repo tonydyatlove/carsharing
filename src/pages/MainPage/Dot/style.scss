@@ -1,0 +1,12 @@
+@import '../../../components/App/сolors';
+
+.slider__dot {
+  padding: 4px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: $gray-light;
+
+  &_active {
+    background: $accent;
+  }
+}

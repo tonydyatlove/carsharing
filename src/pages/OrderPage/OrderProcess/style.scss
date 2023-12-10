@@ -1,0 +1,18 @@
+.order-process {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &__navigation {
+    padding-left: max(64px, calc((100% - 1376px) / 2 + 64px));
+  }
+  &__content {
+    flex-grow: 1;
+    width: 100%;
+    max-width: 1376px;
+    margin: 0 auto;
+    padding: 0 64px;
+  }
+}
+
+@import './medias';

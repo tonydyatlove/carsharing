@@ -1,0 +1,78 @@
+@media screen and (max-device-width: 1023px), screen and (max-width: 1023px) {
+  .overall {
+    width: 100%;
+
+    &__title {
+      display: inline;
+      margin: 0;
+      font-size: 16px;
+      text-align: left;
+      margin-right: 4px;
+    }
+
+    &__list {
+      display: inline;
+    }
+
+    &__city-name {
+      display: inline;
+    }
+
+    &__item {
+      display: inline;
+      margin-bottom: 0;
+      border-bottom: none;
+      position: static;
+
+      span {
+        position: static;
+
+        &:first-of-type {
+          padding-right: 0px;
+        }
+        &:last-of-type {
+          padding-left: 0px;
+        }
+      }
+
+      &::after {
+        content: ', ';
+      }
+
+      &:last-of-type {
+        &::after {
+          content: '';
+        }
+      }
+    }
+
+    &__right {
+      color: $black;
+      text-align: left;
+    }
+
+    &__color {
+      &::after {
+        content: ' цвет';
+      }
+    }
+
+    &__media-lowercase {
+      text-transform: lowercase;
+    }
+    &__media-hidden {
+      display: none;
+    }
+
+    &__price {
+      margin-top: 8px;
+    }
+    &__price-title {
+      color: $black;
+    }
+
+    &__button {
+      margin-top: 16px;
+    }
+  }
+}

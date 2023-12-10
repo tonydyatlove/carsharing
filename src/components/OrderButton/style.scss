@@ -1,0 +1,26 @@
+@import '../App/сolors';
+@import '../App/mixins';
+
+.order-button {
+  @include button(white, 8px, $button-color-from, $button-color-to, 10%, 20%);
+  width: 100%;
+
+  &_disabled {
+    cursor: default;
+    background: $gray-light;
+
+    &:hover {
+      background: $gray-light;
+    }
+  }
+  &_confirmed {
+    @include button(
+      white,
+      8px,
+      $button-deny-left,
+      $button-deny-right,
+      10%,
+      20%
+    );
+  }
+}

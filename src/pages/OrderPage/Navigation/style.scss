@@ -1,0 +1,45 @@
+@import '../../../components/App/сolors';
+
+.navigation {
+  display: flex;
+  align-items: center;
+
+  padding: 6px 0;
+  border-top: 1px solid $gray-light;
+  border-bottom: 1px solid $gray-light;
+
+  &__list {
+    display: flex;
+
+    list-style: none;
+    margin: 0;
+  }
+
+  &__item {
+    margin-right: 16px;
+
+    &:not(:last-of-type)::after {
+      content: url('../../../assets/vector/arrow.svg');
+      margin-left: 16px;
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+    color: $black;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    background-color: transparent;
+
+    &_active {
+      color: $accent;
+    }
+    &_disabled {
+      color: $gray;
+      pointer-events: none;
+    }
+  }
+}
+@import './medias';

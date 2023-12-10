@@ -1,0 +1,46 @@
+@media screen and (max-device-width: 1439px), screen and (max-width: 1439px) {
+  .dropdown {
+    &__content {
+      padding-left: 32px;
+    }
+  }
+}
+
+@media screen and (max-device-width: 1023px), screen and (max-width: 1023px) {
+  .dropdown {
+    font-size: 28px;
+
+    &__transparent {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .dropdown {
+    &__sidebar {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      padding: 16px 0;
+    }
+
+    &__lang-button {
+      display: block;
+    }
+
+    &__opaque {
+      min-width: 256px;
+    }
+
+    &__content {
+      padding: 0;
+      margin-left: -44px;
+    }
+
+    &__links {
+      margin-top: 80px;
+      font-size: 22px;
+    }
+  }
+}

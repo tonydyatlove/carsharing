@@ -1,0 +1,62 @@
+@import '../App/сolors';
+
+
+%line {
+    box-sizing: border-box;
+    height: 3px;
+    content: '';
+    width: 24px;
+    border-radius: 3px;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    background-color: white;
+
+    transform-origin: 1px;
+    transition: transform 0.3s ease-out;
+}
+
+.sidebar__burger {
+    position: relative;
+    z-index: 5;
+    
+    background: transparent;
+    display: block;    
+    cursor: pointer;
+    padding: 0;
+    border: 0;
+    width: 32px;
+    height: 32px;
+
+    &::before {
+        @extend %line;
+        top: 20%;        
+        transform: translateX(-50%) rotate(0);
+    }
+    span {
+        @extend %line;
+        top: 45%;
+        opacity: 1;
+        transition: none;
+    }
+    &::after {
+        @extend %line;      
+        top: 70%;
+        transform: translateX(-50%) rotate(0);
+    }
+
+    &_active {
+        &:before {
+            transform: translateX(-50%) rotate(45deg);
+        }
+        span {
+            opacity: 0;
+        }
+        &:after {
+            transform: translateX(-50%) rotate(-45deg);
+        }
+    }
+}
+
+
+@import './medias';

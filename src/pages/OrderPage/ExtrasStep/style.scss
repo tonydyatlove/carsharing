@@ -1,0 +1,28 @@
+.extras-step {
+  &__group {
+    margin-bottom: 32px;
+  }
+  &__group-label {
+    margin-bottom: 16px;
+  }
+
+  &__date-time-list {
+    width: 250px;
+    text-align: right;
+  }
+  &__date-time-item {
+    margin-bottom: 12px;
+  }
+  &__date-time-label {
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+
+  &__color-item {
+    display: inline;
+    margin-right: 16px;
+  }
+  &__list-item {
+    margin-bottom: 8px;
+  }
+}

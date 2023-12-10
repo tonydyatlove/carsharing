@@ -1,0 +1,23 @@
+@media screen and (max-device-width: 1023px), screen and (max-width: 1023px) {
+    .sidebar {
+        min-width: 86px;
+    }
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+    .sidebar {
+        display: block;
+        position: absolute;
+        top: 0;
+        padding: 0;
+        margin: 16px;
+        height: auto;
+        min-width: 0;
+        width: auto;
+        background-color: transparent;
+
+        .sidebar__lang-button {
+            display: none;
+        }
+    }
+}

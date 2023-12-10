@@ -1,0 +1,63 @@
+@import '../../../components/App/mixins';
+
+@media screen and (max-device-width: 1439px), screen and (max-width: 1439px) {
+  .info {
+    .wrapper {
+      padding: 32px 32px;
+    }
+  }
+}
+
+@media screen and (max-device-width: 1023px), screen and (max-width: 1023px) {
+  .info {
+    margin-left: 86px;
+  }
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .info {
+    display: block;
+    min-width: 320px;
+    margin-left: 0;
+
+    &__main-info {
+      height: calc(100vh - 50%);
+      min-height: 200px;
+    }
+
+    &__title {
+      font-size: 32px;
+      padding: 0 16px;
+    }
+    &__text {
+      font-size: 18px;
+      padding: 0 16px;
+    }
+    &__link-button {
+      margin-top: 32px;
+    }
+
+    &__footer {
+      display: block;
+      background-color: #151b1f;
+      text-align: right;
+      padding: 16px;
+    }
+
+    &__copyright {
+      color: $gray-light;
+      display: block;
+      margin-top: 8px;
+    }
+    &__phone {
+      @include link($accent, $gray-light, white);
+      float: none;
+      display: block;
+    }
+
+    .wrapper {
+      height: 100vh;
+      padding: 0;
+    }
+  }
+}

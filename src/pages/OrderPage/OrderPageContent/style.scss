@@ -1,0 +1,23 @@
+@import '../../../components/App/сolors';
+
+.content {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  margin-left: 64px;
+
+  display: flex;
+  flex-direction: column;
+
+  &__header-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1376px;
+    padding: 32px 64px;
+  }
+  &__process-wrapper {
+    flex-grow: 1;
+  }
+}
+
+@import './medias';

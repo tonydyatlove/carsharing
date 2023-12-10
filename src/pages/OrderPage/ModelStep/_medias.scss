@@ -1,0 +1,72 @@
+@media screen and (max-device-width: 1439px), screen and (max-width: 1439px) {
+  .model-step {
+    &__car-list {
+      width: 100%;
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media screen and (max-device-width: 1023px), screen and (max-width: 1023px) {
+  .model-step {
+    &__car-list {
+      height: 100%;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &__car-image {
+      height: 90px;
+      align-self: flex-end;
+      text-align: right;
+    }
+  }
+}
+
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .model-step {
+    &__category-list {
+      display: none;
+    }
+    &__select.MuiInputBase-root {
+      display: inline-block;
+      margin-bottom: 32px;
+      width: 40%;
+      font-weight: 300;
+
+      &::before {
+        border-bottom: 1px solid $gray;
+      }
+      &::after {
+        border-bottom: 1px solid $black;
+      }
+      &:hover:not(.Mui-disabled):before {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.87);
+      }
+    }
+    .MuiSelect-root {
+      padding: 4px 0 4px;
+      &:focus {
+        background-color: transparent;
+      }
+    }
+
+    &__car-list {
+      grid-template-columns: 1fr;
+    }
+
+    &__car-image {
+      height: 78px;
+      align-self: flex-end;
+      text-align: right;
+    }
+  }
+  .MuiMenu-list {
+    .MuiMenuItem-root {
+      font-weight: 300;
+      &:hover {
+        color: $accent;
+        background-color: transparent;
+      }
+    }
+  }
+}

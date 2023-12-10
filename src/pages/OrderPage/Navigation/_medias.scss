@@ -1,0 +1,17 @@
+@media screen and (max-device-width: 767px), screen and (max-width: 767px) {
+  .navigation {
+    justify-content: center;
+
+    &__list {
+      flex-direction: column;
+    }
+    &__item {
+      text-align: center;
+      margin-right: 0;
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
